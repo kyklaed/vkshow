@@ -1,0 +1,16 @@
+{% extends 'vkshow/index.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<table frame="void" >
+    <tr>
+    <td align='center' ><h2>{{ name }}</h2></td>
+    </tr>
+    </table>
+    <h3>Друзья:</h3>
+    {% if repos %}
+       {% for rep in repos %}
+           <p>{{ rep }}</p>
+       {% endfor %}
+    {% endif %}
+{% endblock %}
